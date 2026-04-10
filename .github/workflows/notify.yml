@@ -63,7 +63,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to seen.json — skipping commit."
           else
-            git pull --rebase origin main
             git commit -m "chore: update seen.json [skip ci]"
-            git push
+            git push origin HEAD:main
           fi
